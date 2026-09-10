@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaGlobe } from "react-icons/fa6";
 

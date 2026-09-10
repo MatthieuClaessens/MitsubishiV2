@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { FaOilCan, FaCogs } from "react-icons/fa";
 import { Gauge } from "lucide-react";

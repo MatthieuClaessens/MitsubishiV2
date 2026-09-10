@@ -8,14 +8,12 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <NavBar />
       <main id="main-content">
         <HeroSection />
         <IntroSection />
         <SpecsSection />
         <LegacySection />
       </main>
-      <Footer />
     </>
   );
 }
