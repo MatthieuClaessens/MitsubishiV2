@@ -8,7 +8,7 @@ export default function IntroSection() {
                 
                 <div className="w-20 h-1 bg-red-600 mx-auto" aria-hidden="true"></div>
                 
-                <p className="text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+                <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
                     Retirées de la gamme Mitsubishi en{" "}
                     <span className="text-white font-bold border-b border-red-600">2015</span> – continuent de captiver l'attention des passionnés d'automobile du monde entier.
                 </p>

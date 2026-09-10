@@ -1,33 +1,18 @@
 "use client";
-
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CircleAlert, Menu, X } from "lucide-react";
+
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
 import Mitsubishi from "@/public/image/mitsubishi.webp";
 
-export default function NavBar() {
-    const [showError, setShowError] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
+interface NavBarProps {
+    onConfigureClick: React.MouseEventHandler<HTMLAnchorElement>;
+}
+
+export default function NavBar({ onConfigureClick }: NavBarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    useEffect(() => {
-        if (showError) {
-            setIsVisible(true);
-            const timer = setTimeout(() => {
-                setIsVisible(false);
-                const removeTimer = setTimeout(() => setShowError(false), 300);
-                return () => clearTimeout(removeTimer);
-            }, 4000);
-
-            return () => clearTimeout(timer);
-        }
-    }, [showError]);
-
-    function configclick(e: React.MouseEvent<HTMLAnchorElement>) {
-        e.preventDefault();
-        setShowError(true);
-    }
 
     const anchor = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
@@ -59,7 +44,7 @@ export default function NavBar() {
                 </div>
                 <Link
                     href="#"
-                    onClick={configclick}
+                    onClick={onConfigureClick}
                     className="text-white bg-red-600 px-5 py-2 uppercase font-sans font-bold text-xs tracking-[3px] hover:bg-red-700 transition-colors cursor-none"
                 >
                     Configurer
@@ -78,7 +63,7 @@ export default function NavBar() {
                         priority
                         className="w-5 object-contain"
                     />
-                    <p className="font-bold text-white text-xs uppercase font-display">
+                    <p className="hidden md:block font-bold text-white text-xs uppercase font-display">
                         Evo <span className="text-red-600">X</span>
                     </p>
                 </div>
@@ -87,14 +72,16 @@ export default function NavBar() {
             </nav>
 
             <div
-                className={`fixed inset-0 bg-black/70 z-40 transition-opacity duration-300 md:hidden ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                    }`}
+                className={`fixed inset-0 bg-black/70 z-40 transition-opacity duration-300 md:hidden ${
+                    isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                }`}
                 onClick={() => setIsMenuOpen(false)}
             />
 
             <div
-                className={`fixed top-0 left-0 bottom-0 w-4/5 max-w-sm bg-black border-r border-zinc-800 z-50 flex flex-col justify-between py-6 px-6 transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
-                    }`}
+                className={`fixed top-0 left-0 bottom-0 w-4/5 max-w-sm bg-black border-r border-zinc-800 z-50 flex flex-col justify-between py-6 px-6 transition-transform duration-300 ease-in-out md:hidden ${
+                    isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                }`}
             >
                 <div>
                     <div className="flex justify-start mb-8">
@@ -114,31 +101,8 @@ export default function NavBar() {
                     </div>
                 </div>
 
-                <div>
-                    <Link
-                        href="#"
-                        onClick={(e) => {
-                            setIsMenuOpen(false);
-                            configclick(e);
-                        }}
-                        className="flex justify-center items-center text-white bg-red-600 w-full py-3 uppercase font-bold text-xs tracking-[3px] hover:bg-red-700 transition-colors"
-                    >
-                        Configurer
-                    </Link>
-                </div>
+                <div></div>
             </div>
-
-            {showError && (
-                <div
-                    className={`fixed top-20 left-1/2 -translate-x-1/2 z-40 w-full max-w-xl px-4 transition-all duration-300 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
-                        }`}
-                >
-                    <div className="flex items-center gap-3 p-4 text-white bg-zinc-900 border border-red-600/50 rounded-lg shadow-2xl">
-                        <span className="font-bold text-red-600 flex items-center"><CircleAlert className="w-5 h-5" /></span>
-                        <p className="text-sm text-zinc-300">Configuration indisponible. Veuillez réessayer plus tard.</p>
-                    </div>
-                </div>
-            )}
         </>
     );
 }
