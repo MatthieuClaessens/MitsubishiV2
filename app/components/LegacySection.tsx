@@ -25,7 +25,7 @@ export default function LegacySection() {
     return (
         <section id="legacy" className="py-12 md:py-32 bg-[#080808]">
             <div className="max-w-7xl pt-20 mx-auto px-6 lg:px-12">
-                <h2 className="font-dots text-3xl md:text-5xl text-white font-display uppercase tracking-tighter mb-16">
+                <h2 className="font-dots text-3xl md:text-5xl text-white font-display uppercase tracking-tighter mb-16 animate-scroll-in">
                     L'héritage rallye
                 </h2>
 
@@ -33,7 +33,7 @@ export default function LegacySection() {
                     {heritageItems.map((item, index) => (
                         <article 
                             key={index}
-                            className="relative bg-[rgba(255,255,255,0.03)] backdrop-blur-[10px] border border-[rgba(255,255,255,0.05)] p-6 md:p-8 flex flex-col justify-between group hover:border-red-600/60 transition-all duration-300 h-full"
+                            className="relative bg-[rgba(255,255,255,0.03)] backdrop-blur-[10px] border border-[rgba(255,255,255,0.05)] p-6 md:p-8 flex flex-col justify-between group hover:border-red-600/60 transition-all duration-300 h-full animate-scroll-in"
                         >
                             <div className="relative z-10">
                                 <p className="text-red-600 font-black text-5xl md:text-6xl italic" aria-label={`Année ${item.year}`}>

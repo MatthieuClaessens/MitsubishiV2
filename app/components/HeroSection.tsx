@@ -1,7 +1,7 @@
 
 export default function HeroSection() {
     return (
-        <section id="home" className="relative h-[37vh] md:h-[60vh] lg:h-screen w-full bg-black overflow-hidden flex items-end md:pb-12 lg:pb-24 px-8 lg:px-20">
+        <section id="home" className="relative h-[45vh] md:h-[60vh] lg:h-screen w-full bg-black overflow-hidden flex items-end md:pb-12 lg:pb-24 px-8 lg:px-20">
             <video
                 src="/video/mitsubishi.mp4"
                 autoPlay
@@ -16,12 +16,12 @@ export default function HeroSection() {
                 <p className="text-red-600 font-bold tracking-[0.6em] uppercase mb-4 text-xs md:text-sm">
                     The Last Samurai
                 </p>
-                <h1 className="text-4xl md:text-[8rem] lg:text-[10rem] font-black leading-[0.8] uppercase text-white">
+                <h1 className="text-4xl md:text-[8rem] lg:text-[10rem] font-black leading-[0.8] uppercase text-white animate-fade-in-up">
                     Lancer <span className="text-outline">Evo</span> <span className="text-red-600">X</span>
                 </h1>
                 <div className="flex items-center gap-6 mt-12">
                     <div className="bg-red-600 w-[4px] h-14 shrink-0" aria-hidden="true"></div>
-                    <p className="text-gray-300 text-xl md:text-2xl lg:text-3xl font-sans leading-snug">
+                    <p className="text-gray-300 text-xl md:text-2xl lg:text-3xl font-sans leading-snug animate-fade-in-up">
                         L'essence pure de la performance <span className="text-red-600 font-bold uppercase text-xl lg:text-2xl">Japonaise</span>.<br />
                         Turbo MIVEC et S-AWC
                     </p>

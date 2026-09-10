@@ -29,14 +29,15 @@ export default function SpecsSection() {
             </div>
             
             <div className="max-w-7xl mx-auto lg:px-12">
-                <h2 className="text-3xl md:text-5xl text-red-600 uppercase tracking-tighter font-display text-center md:text-left">
+                <h2 className="text-3xl md:text-5xl text-red-600 uppercase tracking-tighter font-display text-center md:text-left animate-scroll-in">
                     Ingénierie Brute
                 </h2>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mt-10 md:mt-16 items-center">
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-                        <div className="group h-28 sm:h-40 md:h-52 bg-[#0c0c0c] p-4 md:p-7 flex flex-row sm:flex-col items-center justify-start sm:justify-center text-left sm:text-center gap-5 sm:gap-0 border border-white/5 rounded-lg">
+                        {/* Carte 1 */}
+                        <div className="group h-28 sm:h-40 md:h-52 bg-[#0c0c0c] p-4 md:p-7 flex flex-row sm:flex-col items-center justify-start sm:justify-center text-left sm:text-center gap-5 sm:gap-0 border border-white/5 rounded-lg animate-scroll-in">
                             <div className="h-8 md:h-10 flex items-center justify-center shrink-0">
                                 <FaOilCan className="text-red-600 text-3xl md:text-3xl group-hover:scale-110 transition-transform" />
                             </div>
@@ -47,7 +48,8 @@ export default function SpecsSection() {
                             </div>
                         </div>
 
-                        <div className="group h-28 sm:h-40 md:h-52 bg-[#0c0c0c] p-4 md:p-7 flex flex-row sm:flex-col items-center justify-start sm:justify-center text-left sm:text-center gap-5 sm:gap-0 border border-white/5 rounded-lg">
+                        {/* Carte 2 */}
+                        <div className="group h-28 sm:h-40 md:h-52 bg-[#0c0c0c] p-4 md:p-7 flex flex-row sm:flex-col items-center justify-start sm:justify-center text-left sm:text-center gap-5 sm:gap-0 border border-white/5 rounded-lg animate-scroll-in">
                             <div className="h-8 md:h-10 flex items-center justify-center shrink-0">
                                 <Gauge className="text-red-600 h-8 w-8 md:h-9 md:w-9 group-hover:scale-110 transition-transform" />
                             </div>
@@ -58,7 +60,8 @@ export default function SpecsSection() {
                             </div>
                         </div>
 
-                        <div className="group h-28 sm:h-40 md:h-52 bg-[#0c0c0c] p-4 md:p-7 flex flex-row sm:flex-col items-center justify-start sm:justify-center text-left sm:text-center gap-5 sm:gap-0 border border-white/5 rounded-lg">
+                        {/* Carte 3 */}
+                        <div className="group h-28 sm:h-40 md:h-52 bg-[#0c0c0c] p-4 md:p-7 flex flex-row sm:flex-col items-center justify-start sm:justify-center text-left sm:text-center gap-5 sm:gap-0 border border-white/5 rounded-lg animate-scroll-in">
                             <div className="h-8 md:h-10 flex items-center justify-center shrink-0">
                                 <FaCogs className="text-red-600 text-3xl group-hover:scale-110 transition-transform" />
                             </div>
@@ -72,7 +75,8 @@ export default function SpecsSection() {
                             </div>
                         </div>
 
-                        <div className="group h-28 sm:h-40 md:h-52 bg-[#0c0c0c] p-4 md:p-7 flex flex-row sm:flex-col items-center justify-start sm:justify-center text-left sm:text-center gap-5 sm:gap-0 border border-white/5 rounded-lg">
+                        {/* Carte 4 */}
+                        <div className="group h-28 sm:h-40 md:h-52 bg-[#0c0c0c] p-4 md:p-7 flex flex-row sm:flex-col items-center justify-start sm:justify-center text-left sm:text-center gap-5 sm:gap-0 border border-white/5 rounded-lg animate-scroll-in">
                             <div className="h-8 md:h-10 flex items-center justify-center shrink-0">
                                 <GiGearStickPattern className="text-red-600 text-3xl group-hover:scale-110 transition-transform" />
                             </div>
@@ -84,6 +88,7 @@ export default function SpecsSection() {
                         </div>
                     </div>
 
+                    {/* Bloc Carrousel (Sans animate-scroll-in pour éviter le blocage d'affichage) */}
                     <div
                         className={`relative flex flex-col items-center justify-center select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
                         {...handlers}

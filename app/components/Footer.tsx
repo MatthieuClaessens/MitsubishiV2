@@ -57,7 +57,7 @@ export default function Footer() {
                             </Link>
                         </div>
                         <p className="text-[10px] md:text-[11px] text-gray-400 uppercase tracking-[0.2em] pt-1">
-                            © 2026 — Tous droits réservés
+                            © 2026 - Tous droits réservés
                         </p>
                     </div>
 
