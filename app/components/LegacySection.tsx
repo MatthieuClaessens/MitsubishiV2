@@ -23,22 +23,26 @@ export default function LegacySection() {
     ];
 
     return (
-        <section id="legacy" className="py-32 bg-[#080808]">
+        <section id="legacy" className="py-12 md:py-32 bg-[#080808]">
             <div className="max-w-7xl pt-20 mx-auto px-6 lg:px-12">
-                <h2 className="font-dots text-5xl text-white font-display uppercase tracking-tighter mb-16">
+                <h2 className="font-dots text-3xl md:text-5xl text-white font-display uppercase tracking-tighter mb-16">
                     L'héritage rallye
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                     {heritageItems.map((item, index) => (
                         <article 
                             key={index}
-                            className="bg-[rgba(255,255,255,0.03)] backdrop-blur-[10px] border border-[rgba(255,255,255,0.05)] p-8 flex flex-col justify-between max-h-[320px] group hover:border-red-600/60 transition-all duration-300"
+                            className="relative bg-[rgba(255,255,255,0.03)] backdrop-blur-[10px] border border-[rgba(255,255,255,0.05)] p-6 md:p-8 flex flex-col justify-between group hover:border-red-600/60 transition-all duration-300 h-full"
                         >
-                            <div>
-                                <p className="text-red-600 font-black text-6xl italic" aria-label={`Année ${item.year}`}>{item.year}</p>
-                                <h3 className="text-2xl font-black mt-4 uppercase text-white tracking-wide">{item.title}</h3>
-                                <p className="text-gray-400 mt-4 leading-relaxed text-sm font-light">
+                            <div className="relative z-10">
+                                <p className="text-red-600 font-black text-5xl md:text-6xl italic" aria-label={`Année ${item.year}`}>
+                                    {item.year}
+                                </p>
+                                <h3 className="text-xl md:text-2xl font-black mt-3 uppercase text-white tracking-wide">
+                                    {item.title}
+                                </h3>
+                                <p className="text-gray-300 mt-3 leading-relaxed text-sm font-light">
                                     {item.description}
                                 </p>
                             </div>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CircleAlert, Menu } from "lucide-react";
+import { CircleAlert, Menut } from "lucide-react";
 import Mitsubishi from "@/public/image/mitsubishi.webp";
 
 export default function NavBar() {
@@ -36,19 +36,25 @@ export default function NavBar() {
         window.history.replaceState(null, "", window.location.pathname + window.location.search);
     };
 
+
+    function unfold() {
+
+
+    }
+
+
     return (
         <>
-            <nav className="hidden md:block h-16 w-full bg-black flex items-center px-8 font-sans border-b border-zinc-800 z-30 fixed top-0 left-0">
-                <Image
-                    src={Mitsubishi}
-                    alt="Mitsubishi logo"
-                    priority
-                    className="w-4.5 mx-3 object-contain"
-                />
-                <p className="hidden md:block font-bold text-white font-display uppercase pointer-events-none">
+            <nav className="hidden md:flex h-16 w-full bg-black items-center px-8 font-sans border-b border-zinc-800 z-30 fixed top-0 left-0">                <Image
+                src={Mitsubishi}
+                alt="Mitsubishi logo"
+                priority
+                className="w-4.5 mx-3 object-contain"
+            />
+                <p className="md:block font-bold text-white font-display uppercase pointer-events-none">
                     Lancer <span className="text-red-600">Evo</span>
                 </p>
-                <div className="flex justify-center mx-auto gap-16 uppercase font-bold text-xs tracking-[3px]">
+                <div className="flex justify-center mx-auto gap-8 lg:gap-16 uppercase font-bold text-xs tracking-[3px] items-center text-center">
                     <Link href="#home" onClick={(e) => anchor(e, "home")} className="text-white hover:text-red-600 cursor-none">Accueil</Link>
                     <Link href="#specs" onClick={(e) => anchor(e, "specs")} className="text-white hover:text-red-600 cursor-none">Spécifications</Link>
                     <Link href="#legacy" onClick={(e) => anchor(e, "legacy")} className="text-white hover:text-red-600 cursor-none">L'Héritage Rallye</Link>
@@ -75,13 +81,21 @@ export default function NavBar() {
             )
             }
 
-            <nav className="md:hidden h-12 w-full bg-black flex items-center px-8 font-sans border-b border-red-600 z-30 fixed top-0 left-0">
-                <Menu className="text-gray-200" />
-                <Image
-                    src={Mitsubishi}
-                    alt="Mitsubishi logo"
-                    priority
-                    className="w-6 mx-3 object-contain mx-auto" />
+            <nav className="md:hidden h-12 w-full bg-black grid grid-cols-3 items-center px-6 font-sans border-b border-red-600 z-30 fixed top-0 left-0">
+                <div className="flex justify-start">
+                    <Menu onClick={unfold} className="text-gray-200 cursor-pointer" />
+                </div>
+
+                <div className="flex justify-center">
+                    <Image
+                        src={Mitsubishi}
+                        alt="Mitsubishi logo"
+                        priority
+                        className="w-6 object-contain"
+                    />
+                </div>
+
+                <div />
             </nav>
         </>
     );
