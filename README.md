@@ -55,7 +55,7 @@ git clone https://github.com/MatthieuClaessens/mitsubishi-v2.git
 cd mitsubishi-v2
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start the local development server
-npm run dev
+pnpm run dev
