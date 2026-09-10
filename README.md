@@ -20,8 +20,8 @@
 
 > **💡 Note:** This is an independent personal project created for design and development practice, and is **not an official website** of Mitsubishi Motors.
 
-🔗 **Live Preview:** [Explore the V2 App](https://mitsubishi-v2.vercel.app/)  
-🔙 **Curious about the origins?** Check out the [Mitsubishi V1 (HTML/JS/Vite)](https://github.com/MatthieuClaessens/mitsubishi-site) repository.
+🔗 **Live Preview:** <a href="https://mitsubishi-v2.vercel.app/" target="_blank">Explore the V2 App</a>  
+🔙 **Curious about the origins?** Check out the <a href="https://github.com/MatthieuClaessens/mitsubishi-site" target="_blank">Mitsubishi V1 (HTML/JS/Vite)</a> repository.
 
 ---
 
@@ -49,7 +49,7 @@ To run this project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/MatthieuClaessens/mitsubishi-v2.git
+git clone [https://github.com/MatthieuClaessens/mitsubishi-v2.git](https://github.com/MatthieuClaessens/mitsubishi-v2.git)
 
 # Navigate to the project directory
 cd mitsubishi-v2
